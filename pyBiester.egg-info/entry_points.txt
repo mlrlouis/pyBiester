@@ -1,0 +1,2 @@
+[console_scripts]
+biester_client = pyBiester.BENE_sample_client:client_main
