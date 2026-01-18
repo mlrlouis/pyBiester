@@ -1,4 +1,4 @@
-from bene_strategie import BeastBrain
+from strategy_one import BeastBrain
 
 
 def print_env(env_str):

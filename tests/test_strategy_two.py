@@ -2,7 +2,7 @@
 Tests für thilos_strategy.py
 """
 import pytest
-from pyBiester.thilos_strategy import (
+from pyBiester.strategy_two import (
     BIESTER,
     Symbol,
     WELT_X,

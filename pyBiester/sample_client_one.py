@@ -1,4 +1,4 @@
-""" Example pybeasts client implementing random movement and splitting """
+"""Example pybeasts client implementing random movement and splitting"""
 
 import argparse
 import asyncio
@@ -7,12 +7,13 @@ import os
 import random
 import signal
 import ssl
-import sys 
+import sys
 import websockets
 from websockets import WebSocketClientProtocol
 from websockets.exceptions import ConnectionClosed
 
-from . import thilos_strategy
+from .strategy_one import BeastBrain
+
 # accept self-signed certificate
 ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 ssl_context.check_hostname = False
@@ -72,7 +73,8 @@ async def handle_beast_command_request(
         energy (float): The energy level of the beast.
         environment (str): The environment as 1d string.
     """
-    server_command, _ = thilos_strategy.get_action(environment, beast_id, energy)
+    brain = BeastBrain(3)
+    server_command = brain.decide(beast_id, energy, environment)
     print_and_flush(f'sending "{server_command}"')
     # don't change the next line or you will break the protocol
     await websocket.send(server_command)

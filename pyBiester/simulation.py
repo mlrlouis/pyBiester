@@ -1,5 +1,5 @@
 import random
-from thilos_strategy import get_action, BIESTER, WELT_X, WELT_Y, Symbol
+from strategy_two import get_action, BIESTER, WELT_X, WELT_Y, Symbol
 
 # --- Kleine Hilfsklasse für das Spielfeld ---
 class World:

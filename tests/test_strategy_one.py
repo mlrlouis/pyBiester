@@ -3,7 +3,7 @@ Tests für bene_strategie.py
 """
 import math
 import pytest
-from pyBiester.bene_strategie import BeastBrain
+from pyBiester.strategy_one import BeastBrain
 
 @pytest.fixture
 def brain():
