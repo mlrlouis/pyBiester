@@ -1,5 +1,5 @@
 """
-Tests für bene_strategie.py 
+Tests für 
 """
 import math
 import pytest
