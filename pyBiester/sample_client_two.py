@@ -72,7 +72,7 @@ async def handle_beast_command_request(
         energy (float): The energy level of the beast.
         environment (str): The environment as 1d string.
     """
-    server_command, _ = thilos_strategy.get_action(environment, beast_id, energy)
+    server_command, _ = 
     print_and_flush(f'sending "{server_command}"')
     # don't change the next line or you will break the protocol
     await websocket.send(server_command)
