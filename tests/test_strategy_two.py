@@ -1,5 +1,5 @@
 """
-Tests für thilos_strategy.py
+Tests für 
 """
 import pytest
 from pyBiester.strategy_two import (
